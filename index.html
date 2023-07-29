@@ -21,6 +21,11 @@
   </style>
 
 
+    <script>
+      // Define a global variable
+      let x = 0;
+    </script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -61,30 +66,32 @@
       <!-- <br> -->
       <div class="circle-container">
 
-        <button class="circle", onclick="goToThankYouPage(1)">
+        <button class="circle", onclick="setCookie(1)">
           1
 
         </button>
 
-        <button  class="circle", onclick="goToThankYouPage(2)">
+        <button  class="circle", onclick="setCookie(2)">
 
           2
         </button>
 
-        <button class="circle", onclick="goToThankYouPage(3)">
+        <button class="circle", onclick="setCookie(3)">
 
           3
         </button>
 
 
-        <button class="circle", onclick="goToThankYouPage(4)">
+        <button class="circle", onclick="setCookie(4)">
           4
         </button>
 
 
-        <button class="circle", onclick="goToThankYouPage(5)">
+        <button class="circle", onclick="setCookie(5)">
           5
         </button>
+
+
 
 
         <script>
@@ -113,21 +120,43 @@
 
         </script>
 
-
-<!--
         <script>
-          function goToThankYouPage(value){
-            window.location = "thankyoupage.html?value=" + value;
+          function setCookie(number) {
+            x = number;
           }
-        </script> -->
+        </script>
+
+
       </div>
 
 
       <br>
-      <button class="submit-button">
+      <button class="submit-button", onclick="goToThankYouPage()">
         <p style=" text-align: center;">SUBMIT</p>
 
+
+
       </button>
+
+
+        <script>
+
+
+          // function getCookie(name) {
+          //     const cookies = document.cookie.split("; ");
+          //     for (const cookie of cookies) {
+          //       const [cookieName, cookieValue] = cookie.split("=");
+          //       if (cookieName === name) {
+          //         return cookieValue;
+          //       }
+          //     }
+          //     return null;
+          // }
+          function goToThankYouPage(){
+            // let x = document.cookie;
+            window.location = "thankyoupage.html?value=" + x;
+          }
+        </script>
     </div>
 
 
