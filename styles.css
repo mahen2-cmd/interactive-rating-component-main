@@ -7,7 +7,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh
+    height: 100vh;
+
+    font-family: 'Overpass', sans-serif;
 }
 
 
@@ -130,17 +132,11 @@ body {
 .square2 {
     width: 375px;
     height: 375px;
-    /* padding: 70px; */
-    /* background-color: rgba(51, 3, 3, 0.708); */
 
-    /* background: linear-gradient(to bottom, #303747, #202125); */
     background: linear-gradient(to bottom, hsl(213, 19%, 18%), hsl(216, 12%, 8%));
-    /* border-radius: 10px; */
 
     border-radius: 30px;
 
-    /* display: flex; */
-    /* align-items: flex-start; */
     margin: auto;
 }
 
@@ -164,10 +160,14 @@ body {
     color: hsl(25, 97%, 53%);
     border: none;
     cursor: pointer;
-    /* border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 13px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    width: 100%; */
 }
+
+
+ footer {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     padding: 10px;
+     text-align: center;
+ }
